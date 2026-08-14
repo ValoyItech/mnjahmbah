@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martins Mbah Njah · Expertise</title>
+  <!-- SEO & Social Meta Tags -->
+<meta name="description" content="Discover Martins Mbah Njah's areas of expertise including legal and compliance, tax and debt advisory, training and development, governance, strategy and public sector consulting.">
+<meta name="keywords" content="Martins Mbah Njah expertise, legal compliance, tax advisory, debt counselling, training, governance, strategy, public sector, B-BBEE, consulting">
+<meta name="author" content="Martins Mbah Njah">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a4b7a">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Expertise | Martins Mbah Njah">
+<meta property="og:description" content="Legal, tax, compliance, governance, strategy, training and public sector expertise of Martins Mbah Njah.">
+<meta property="og:image" content="images/legal.jpg">
+<meta property="og:image:alt" content="Legal and compliance expertise">
+<meta property="og:site_name" content="Martins Mbah Njah">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Expertise | Martins Mbah Njah">
+<meta name="twitter:description" content="Explore Martins Mbah Njah's professional areas of expertise.">
+<meta name="twitter:image" content="images/legal.jpg">
+<meta name="twitter:image:alt" content="Legal and compliance expertise">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:#f5f9ff; color:#0b1e33; line-height:1.5; }
+    :root { --primary:#0a4b7a; --primary-light:#2a7bb5; --primary-dark:#073a5e; --accent:#4ba0e0; --shadow:0 20px 40px -12px rgba(2,40,80,0.18); --radius:28px; }
+    .container { max-width:1280px; margin:0 auto; padding:0 28px; }
+
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-track { background:#d9e6f2; }
+    ::-webkit-scrollbar-thumb { background:var(--primary-light); border-radius:12px; }
+
+    /* NAVIGATION */
+    .navbar { background:rgba(255,255,255,0.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(10,75,122,0.06); position:sticky; top:0; z-index:999; padding:14px 0; box-shadow:0 4px 20px rgba(0,0,0,0.02); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .logo { font-weight:700; font-size:1.4rem; color:var(--primary-dark); letter-spacing:-0.3px; }
+    .logo i { color:var(--primary-light); margin-right:8px; }
+    .nav-links { display:flex; gap:18px; font-weight:500; flex-wrap:wrap; }
+    .nav-links a { text-decoration:none; color:#1f3a57; font-size:0.9rem; transition:0.2s; border-bottom:2px solid transparent; padding-bottom:4px; }
+    .nav-links a:hover, .nav-links a.active { color:var(--primary); border-bottom-color:var(--primary-light); }
+    .nav-badge { background:var(--primary); color:white; padding:8px 20px; border-radius:40px; font-size:0.8rem; font-weight:600; display:inline-flex; align-items:center; gap:8px; transition:0.2s; text-decoration:none; }
+    .nav-badge:hover { background:var(--primary-dark); transform:scale(1.02); }
+    .menu-toggle { display:none; font-size:1.6rem; background:transparent; border:none; color:var(--primary-dark); cursor:pointer; transition:0.2s; }
+    .menu-toggle:hover { color:var(--primary-light); }
+
+    /* SIDEBAR */
+    .sidebar { position:fixed; top:0; right:-280px; width:260px; height:100%; background:white; box-shadow:-8px 0 30px rgba(0,0,0,0.08); padding:30px 20px; transition:right 0.35s ease; z-index:1000; border-left:1px solid rgba(10,75,122,0.06); overflow-y:auto; }
+    .sidebar.open { right:0; }
+    .sidebar .close-btn { background:transparent; border:none; font-size:1.8rem; color:var(--primary-dark); margin-bottom:30px; cursor:pointer; }
+    .sidebar a { display:block; text-decoration:none; color:#1f3a57; font-weight:500; padding:12px 0; border-bottom:1px solid rgba(10,75,122,0.04); transition:0.2s; }
+    .sidebar a:hover, .sidebar a.active { color:var(--primary); padding-left:8px; }
+    .sidebar-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.2); opacity:0; pointer-events:none; transition:opacity 0.3s ease; z-index:999; }
+    .sidebar-overlay.show { opacity:1; pointer-events:auto; }
+
+    /* SECTIONS */
+    section { padding:70px 0 60px; opacity:0; transform:translateY(20px); animation:fadeUp 0.7s ease forwards; }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+    .section-title { font-size:2.2rem; font-weight:700; color:var(--primary-dark); margin-bottom:8px; display:flex; align-items:center; gap:14px; }
+    .section-title i { color:var(--accent); font-size:2rem; }
+    .section-sub { color:#2d5272; margin-bottom:40px; font-size:1.05rem; border-left:4px solid var(--accent); padding-left:24px; }
+
+    /* CARDS WITH IMAGES */
+    .card-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:28px; }
+    .card { background:white; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow); transition:0.3s; border:1px solid rgba(10,75,122,0.03); display:flex; flex-direction:column; }
+    .card:hover { transform:translateY(-8px); box-shadow:0 30px 50px -16px rgba(10,75,122,0.2); border-color:rgba(10,75,122,0.08); }
+    .card-img { width:100%; height:180px; object-fit:cover; display:block; }
+    .card-body { padding:24px 24px 28px; flex:1; display:flex; flex-direction:column; }
+    .card-body h3 { font-size:1.2rem; font-weight:600; margin-bottom:10px; color:var(--primary-dark); }
+    .card-body p { color:#2b4b6e; line-height:1.6; font-size:0.92rem; margin-bottom:14px; flex:1; }
+    .chip { background:#e7f0fa; padding:5px 14px; border-radius:50px; font-size:0.78rem; font-weight:500; color:var(--primary-dark); border:1px solid rgba(10,75,122,0.06); display:inline-block; margin:3px 3px 0 0; transition:0.2s; }
+    .chip:hover { background:var(--primary); color:white; }
+
+    /* AREAS OF PRACTICE WITH IMAGES */
+    .practice-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:24px; margin-top:20px; }
+    .practice-item { background:white; border-radius:24px; overflow:hidden; box-shadow:var(--shadow); border:1px solid rgba(10,75,122,0.04); transition:0.3s; }
+    .practice-item:hover { transform:translateY(-6px); box-shadow:0 25px 45px -12px rgba(10,75,122,0.18); }
+    .practice-item img { width:100%; height:200px; object-fit:cover; display:block; }
+    .practice-caption { padding:16px 14px 18px; text-align:center; }
+    .practice-caption .title { font-weight:600; font-size:0.95rem; color:var(--primary-dark); }
+    .practice-caption .sub { font-size:0.78rem; color:#2d5272; margin-top:4px; }
+
+    /* FOOTER */
+    footer { background:#0b1e33; color:rgba(255,255,255,0.7); padding:40px 0; margin-top:20px; border-radius:40px 40px 0 0; }
+    footer .container { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+    footer a { color:#8bb9e6; text-decoration:none; }
+    footer a:hover { color:white; }
+
+    @media (max-width:900px){
+      .nav-links { display:none; }
+      .menu-toggle { display:block; }
+      .card-img { height:240px; }
+      .practice-item img { height:260px; }
+    }
+    @media (max-width:600px){
+      .container { padding:0 18px; }
+      .section-title { font-size:1.8rem; }
+      .card-img { height:280px; }
+      .practice-item img { height:300px; }
+    }
+  </style>
+
+</head>
+<body>
+<nav class="navbar">
+    <div class="container">
+      <div class="logo"><i class="fas fa-scale-balanced"></i> M. Njah</div>
+      <div class="nav-links">
+        <a href="index.html">Overview</a>
+        <a href="about.html">About</a>
+        <a href="expertise.html" class="active">Expertise</a>
+        <a href="experience.html">Experience</a>
+        <a href="qualifications.html">Qualifications</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="https://www.acorser.co.za/" target="_blank" class="nav-badge">
+        <i class="fas fa-briefcase"></i> Acorser
+      </a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+<!-- SIDEBAR (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></button>
+  <a href="index.html">Overview</a>
+  <a href="about.html">About</a>
+  <a href="expertise.html" class="active">Expertise</a>
+  <a href="experience.html">Experience</a>
+  <a href="qualifications.html">Qualifications</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="contact.html">Contact</a>
+  <div style="margin-top:30px; border-top:1px solid rgba(10,75,122,0.06); padding-top:20px;">
+    <a href="https://www.acorser.co.za/" target="_blank"><i class="fas fa-briefcase"></i> Acorser</a>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <div class="section-title"><i class="fas fa-microchip"></i> Expertise</div>
+    <div class="section-sub">Skills &amp; strengths · legal, tax, consulting, training</div>
+
+    <div class="card-grid">
+      <div class="card">
+        <img src="images/legal.jpg" alt="Legal & Compliance" class="card-img" />
+        <div class="card-body">
+          <h3>Legal &amp; Compliance</h3>
+          <p>Civil, commercial &amp; tax litigation · conveyancing · notarial practice · contract drafting &amp; interpretation · compliance management.</p>
+          <div><span class="chip">Litigation</span><span class="chip">Conveyancing</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/tax.jpg" alt="Tax & Debt" class="card-img" />
+        <div class="card-body">
+          <h3>Tax &amp; Debt</h3>
+          <p>Personal &amp; corporate income tax advisory · debt reviews · business rescues · registered tax practitioner (SAIT Master).</p>
+          <div><span class="chip">Tax advisory</span><span class="chip">Debt review</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/training.jpg" alt="Training & Development" class="card-img" />
+        <div class="card-body">
+          <h3>Training &amp; Development</h3>
+          <p>Learning programme design · facilitation · coaching · mentorship · curriculum development for tertiary &amp; corporate.</p>
+          <div><span class="chip">Programme design</span><span class="chip">Facilitation</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/ldd.jpg" alt="Governance & Strategy" class="card-img" />
+        <div class="card-body">
+          <h3>Governance &amp; Strategy</h3>
+          <p>Strategic management · corporate governance · risk assessment · due diligence · B-BBEE management · organisational renewal.</p>
+          <div><span class="chip">Governance</span><span class="chip">B-BBEE</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/pub.jpg" alt="Public Sector" class="card-img" />
+        <div class="card-body">
+          <h3>Public Sector</h3>
+          <p>Local government · municipal administration · policy advisory · co-operative governance · rural development programmes.</p>
+          <div><span class="chip">Municipal</span><span class="chip">Policy</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="images/member.jpg" alt="Professional Memberships" class="card-img" />
+        <div class="card-body">
+          <h3>Professional Memberships</h3>
+          <p>LPC (109384) · SAIT Master Tax (63513758) · NCR Debt Counsellor (3244) · JCI Senator (72025).</p>
+          <div><span class="chip">LPC</span><span class="chip">SAIT</span><span class="chip">NCR</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Areas of practice with real images -->
+    <div style="margin-top:48px; background:white; border-radius:var(--radius); padding:32px; box-shadow:var(--shadow);">
+      <h3 style="display:flex; gap:12px; color:var(--primary-dark); margin-bottom:4px;"><i class="fas fa-briefcase" style="color:var(--accent);"></i> Areas of practice</h3>
+      <div class="practice-grid">
+        <div class="practice-item">
+          <img src="images/high.jpeg" alt="Civil litigation" />
+          <div class="practice-caption">
+            <div class="title">Civil litigation</div>
+            <div class="sub">High Court &amp; lower courts</div>
+          </div>
+        </div>
+        <div class="practice-item">
+          <img src="images/contract.jpeg" alt="Contract drafting" />
+          <div class="practice-caption">
+            <div class="title">Contract drafting</div>
+            <div class="sub">Interpretation &amp; negotiation</div>
+          </div>
+        </div>
+        <div class="practice-item">
+          <img src="images/taxi.jpg" alt="Tax consulting" />
+          <div class="practice-caption">
+            <div class="title">Tax consulting</div>
+            <div class="sub">Corporate &amp; personal</div>
+          </div>
+        </div>
+        <div class="practice-item">
+          <img src="images/train.jpg" alt="Training & coaching" />
+          <div class="practice-caption">
+            <div class="title">Training &amp; coaching</div>
+            <div class="sub">Executives &amp; entrepreneurs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div><strong style="color:white;">Martins Mbah Njah</strong><br /><span style="font-size:0.9rem;">Admitted Attorney · Tax Practitioner · Debt Counsellor</span></div>
+      <div><i class="fas fa-phone-alt"></i> +27 72 872 7314<br /><i class="fas fa-envelope"></i> njahmbah@acorser.co.za<br /><a href="https://wa.me/27728727314" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+      <div><a href="https://www.acorser.co.za/" target="_blank"><i class="fas fa-globe"></i> acorser.co.za</a><br /><a href="https://www.acorser.co.za/legal" target="_blank"><i class="fas fa-scale-balanced"></i> Legal Practice</a></div>
+    </div>
+  </footer>
+
+<script>
+(function() {
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('closeSidebar');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSidebar();
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Martins Mbah Njah · Workshops</title>
+  <!-- SEO & Social Meta Tags -->
+<meta name="description" content="Explore professional workshops and training programmes by Martins Mbah Njah covering contract management, labour law, ICT law, employment equity, governance, compliance, business writing and occupational health and safety.">
+<meta name="keywords" content="Martins Mbah Njah workshops, legal training, contract management, labour law, ICT law, employment equity, business writing, governance training, compliance training, OHS training">
+<meta name="author" content="Martins Mbah Njah">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a4b7a">
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="images/logo.png">
+<link rel="apple-touch-icon" href="images/logo.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Workshops & Training | Martins Mbah Njah">
+<meta property="og:description" content="Professional workshops and training programmes covering law, contracts, labour relations, ICT compliance, governance and workplace compliance.">
+<meta property="og:image" content="images/scm.jpg">
+<meta property="og:image:alt" content="Contract management workshop">
+<meta property="og:site_name" content="Martins Mbah Njah">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Workshops & Training | Martins Mbah Njah">
+<meta name="twitter:description" content="Professional legal, governance, compliance and business training programmes.">
+<meta name="twitter:image" content="images/scm.jpg">
+<meta name="twitter:image:alt" content="Contract management workshop">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',sans-serif; background:#f5f9ff; color:#0b1e33; line-height:1.5; }
+    :root { --primary:#0a4b7a; --primary-light:#2a7bb5; --primary-dark:#073a5e; --accent:#4ba0e0; --shadow:0 20px 40px -12px rgba(2,40,80,0.18); --radius:28px; }
+    .container { max-width:1280px; margin:0 auto; padding:0 28px; }
+
+    ::-webkit-scrollbar { width:8px; }
+    ::-webkit-scrollbar-track { background:#d9e6f2; }
+    ::-webkit-scrollbar-thumb { background:var(--primary-light); border-radius:12px; }
+
+    /* ================= NAVIGATION ================= */
+    .navbar { background:rgba(255,255,255,0.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid rgba(10,75,122,0.06); position:sticky; top:0; z-index:999; padding:14px 0; box-shadow:0 4px 20px rgba(0,0,0,0.02); }
+    .navbar .container { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; }
+    .logo { font-weight:700; font-size:1.4rem; color:var(--primary-dark); letter-spacing:-0.3px; }
+    .logo i { color:var(--primary-light); margin-right:8px; }
+    .nav-links { display:flex; gap:18px; font-weight:500; flex-wrap:wrap; }
+    .nav-links a { text-decoration:none; color:#1f3a57; font-size:0.9rem; transition:0.2s; border-bottom:2px solid transparent; padding-bottom:4px; }
+    .nav-links a:hover, .nav-links a.active { color:var(--primary); border-bottom-color:var(--primary-light); }
+    .nav-badge { background:var(--primary); color:white; padding:8px 20px; border-radius:40px; font-size:0.8rem; font-weight:600; display:inline-flex; align-items:center; gap:8px; transition:0.2s; text-decoration:none; }
+    .nav-badge:hover { background:var(--primary-dark); transform:scale(1.02); }
+    .menu-toggle { display:none; font-size:1.6rem; background:transparent; border:none; color:var(--primary-dark); cursor:pointer; transition:0.2s; }
+    .menu-toggle:hover { color:var(--primary-light); }
+
+    /* SIDEBAR */
+    .sidebar { position:fixed; top:0; right:-280px; width:260px; height:100%; background:white; box-shadow:-8px 0 30px rgba(0,0,0,0.08); padding:30px 20px; transition:right 0.35s ease; z-index:1000; border-left:1px solid rgba(10,75,122,0.06); overflow-y:auto; }
+    .sidebar.open { right:0; }
+    .sidebar .close-btn { background:transparent; border:none; font-size:1.8rem; color:var(--primary-dark); margin-bottom:30px; cursor:pointer; }
+    .sidebar a { display:block; text-decoration:none; color:#1f3a57; font-weight:500; padding:12px 0; border-bottom:1px solid rgba(10,75,122,0.04); transition:0.2s; }
+    .sidebar a:hover, .sidebar a.active { color:var(--primary); padding-left:8px; }
+    .sidebar-overlay { position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.2); opacity:0; pointer-events:none; transition:opacity 0.3s ease; z-index:999; }
+    .sidebar-overlay.show { opacity:1; pointer-events:auto; }
+
+    /* ================= SECTIONS ================= */
+    section { padding:70px 0 60px; opacity:0; transform:translateY(20px); animation:fadeUp 0.7s ease forwards; }
+    @keyframes fadeUp { to { opacity:1; transform:translateY(0); } }
+    .section-title { font-size:2.2rem; font-weight:700; color:var(--primary-dark); margin-bottom:8px; display:flex; align-items:center; gap:14px; }
+    .section-title i { color:var(--accent); font-size:2rem; }
+    .section-sub { color:#2d5272; margin-bottom:40px; font-size:1.05rem; border-left:4px solid var(--accent); padding-left:24px; }
+
+    /* ================= WORKSHOP CAROUSEL ================= */
+    .workshop-carousel-wrap { position:relative; overflow:hidden; padding:0 0 20px; }
+    .workshop-carousel { display:flex; gap:28px; transition:transform 0.5s cubic-bezier(0.23,1,0.32,1); padding:10px 4px 30px; }
+
+    .workshop-card {
+      flex:0 0 360px;
+      background:white;
+      border-radius:var(--radius);
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      transition:0.35s ease;
+      border:1px solid rgba(10,75,122,0.04);
+      display:flex;
+      flex-direction:column;
+    }
+    .workshop-card:hover {
+      transform:translateY(-10px) scale(1.02);
+      box-shadow:0 35px 60px -14px rgba(10,75,122,0.25);
+      border-color:rgba(10,75,122,0.1);
+    }
+    .workshop-card-img {
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      display:block;
+      transition:0.5s ease;
+    }
+    .workshop-card:hover .workshop-card-img {
+      transform:scale(1.06);
+    }
+    .workshop-card-body {
+      padding:26px 24px 28px;
+      flex:1;
+      display:flex;
+      flex-direction:column;
+    }
+    .workshop-card-body .icon-wrap {
+      width:52px; height:52px;
+      border-radius:16px;
+      background:linear-gradient(135deg, var(--primary-light), var(--accent));
+      display:flex; align-items:center; justify-content:center;
+      margin-bottom:16px;
+      box-shadow:0 8px 20px rgba(10,75,122,0.2);
+    }
+    .workshop-card-body .icon-wrap i { color:white; font-size:1.3rem; }
+    .workshop-card-body h3 {
+      font-size:1.15rem;
+      font-weight:700;
+      margin-bottom:10px;
+      color:var(--primary-dark);
+      line-height:1.3;
+    }
+    .workshop-card-body p {
+      color:#2b4b6e;
+      line-height:1.6;
+      font-size:0.9rem;
+      flex:1;
+    }
+    .workshop-card-body .tag {
+      display:inline-block;
+      background:#e7f0fa;
+      padding:5px 14px;
+      border-radius:50px;
+      font-size:0.75rem;
+      font-weight:500;
+      color:var(--primary-dark);
+      border:1px solid rgba(10,75,122,0.06);
+      margin-top:14px;
+      transition:0.2s;
+    }
+    .workshop-card:hover .tag { background:var(--primary); color:white; }
+
+    /* Carousel controls */
+    .carousel-controls {
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:16px;
+      margin-top:10px;
+    }
+    .carousel-btn {
+      width:48px; height:48px;
+      border-radius:50%;
+      border:2px solid rgba(10,75,122,0.15);
+      background:white;
+      color:var(--primary-dark);
+      font-size:1.1rem;
+      cursor:pointer;
+      transition:0.25s;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 14px rgba(10,75,122,0.1);
+    }
+    .carousel-btn:hover {
+      background:var(--primary);
+      color:white;
+      border-color:var(--primary);
+      transform:scale(1.08);
+    }
+    .carousel-btn:disabled {
+      opacity:0.35;
+      cursor:not-allowed;
+      transform:none;
+    }
+    .carousel-dots {
+      display:flex;
+      gap:8px;
+    }
+    .carousel-dots .cdot {
+      width:10px; height:10px;
+      border-radius:50%;
+      border:2px solid rgba(10,75,122,0.2);
+      background:transparent;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .carousel-dots .cdot.active {
+      background:var(--primary);
+      border-color:var(--primary);
+      box-shadow:0 0 10px rgba(10,75,122,0.3);
+      width:28px;
+      border-radius:10px;
+    }
+    .carousel-dots .cdot:hover {
+      border-color:var(--primary-light);
+    }
+
+    /* ================= TRAINING METHODOLOGY ================= */
+    .method-section {
+      background:linear-gradient(135deg, #0b1e33 0%, #0f2a44 50%, #0b1e33 100%);
+      border-radius:var(--radius);
+      padding:48px 40px;
+      margin-top:48px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+    .method-section::before {
+      content:'';
+      position:absolute;
+      top:-50%; right:-20%;
+      width:500px; height:500px;
+      background:radial-gradient(circle, rgba(75,160,224,0.08) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .method-section .section-title { color:white; }
+    .method-section .section-sub { color:#8bb9e6; border-left-color:var(--accent); }
+    .method-grid {
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:24px;
+      margin-top:28px;
+      position:relative;
+      z-index:1;
+    }
+    .method-item {
+      background:rgba(255,255,255,0.06);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:28px 20px;
+      text-align:center;
+      transition:0.35s ease;
+      backdrop-filter:blur(4px);
+    }
+    .method-item:hover {
+      background:rgba(255,255,255,0.12);
+      transform:translateY(-6px);
+      border-color:rgba(255,255,255,0.15);
+    }
+    .method-item .m-icon {
+      width:64px; height:64px;
+      border-radius:20px;
+      background:linear-gradient(135deg, var(--primary-light), var(--accent));
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 16px;
+      box-shadow:0 10px 28px rgba(10,75,122,0.3);
+      transition:0.3s;
+    }
+    .method-item:hover .m-icon {
+      transform:translateY(-4px) scale(1.05);
+      box-shadow:0 14px 36px rgba(10,75,122,0.4);
+    }
+    .method-item .m-icon i { color:white; font-size:1.5rem; }
+    .method-item .m-title { font-weight:700; color:white; font-size:1rem; margin-bottom:6px; }
+    .method-item .m-desc { color:rgba(255,255,255,0.65); font-size:0.85rem; line-height:1.5; }
+
+    /* ================= FOOTER ================= */
+    footer { background:#0b1e33; color:rgba(255,255,255,0.7); padding:40px 0; margin-top:20px; border-radius:40px 40px 0 0; }
+    footer .container { display:flex; justify-content:space-between; flex-wrap:wrap; gap:20px; }
+    footer a { color:#8bb9e6; text-decoration:none; }
+    footer a:hover { color:white; }
+
+    /* ================= RESPONSIVE ================= */
+    @media (max-width:1100px){
+      .workshop-card { flex:0 0 320px; }
+      .method-grid { grid-template-columns:repeat(2,1fr); }
+    }
+    @media (max-width:900px){
+      .nav-links { display:none; }
+      .menu-toggle { display:block; }
+      .workshop-card { flex:0 0 300px; }
+      .workshop-card-img { height:190px; }
+      .method-section { padding:36px 24px; }
+    }
+    @media (max-width:600px){
+      .container { padding:0 18px; }
+      .section-title { font-size:1.8rem; }
+      .workshop-card { flex:0 0 280px; }
+      .workshop-card-img { height:170px; }
+      .workshop-card-body { padding:20px 18px 24px; }
+      .method-grid { grid-template-columns:1fr; }
+      .method-section { padding:28px 20px; border-radius:20px; }
+      .carousel-btn { width:42px; height:42px; }
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="navbar">
+  <div class="container">
+    <div class="logo"><i class="fas fa-scale-balanced"></i> M. Njah</div>
+    <div class="nav-links">
+      <a href="index.html">Overview</a>
+      <a href="about.html">About</a>
+      <a href="expertise.html">Expertise</a>
+      <a href="experience.html">Experience</a>
+      <a href="qualifications.html">Qualifications</a>
+      <a href="workshops.html" class="active">Workshops</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a href="https://www.acorser.co.za/" target="_blank" class="nav-badge">
+      <i class="fas fa-briefcase"></i> Acorser
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- SIDEBAR (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+<div class="sidebar" id="sidebar">
+  <button class="close-btn" id="closeSidebar"><i class="fas fa-times"></i></button>
+  <a href="index.html">Overview</a>
+  <a href="about.html">About</a>
+  <a href="expertise.html">Expertise</a>
+  <a href="experience.html">Experience</a>
+  <a href="qualifications.html">Qualifications</a>
+  <a href="workshops.html" class="active">Workshops</a>
+  <a href="contact.html">Contact</a>
+  <div style="margin-top:30px; border-top:1px solid rgba(10,75,122,0.06); padding-top:20px;">
+    <a href="https://www.acorser.co.za/" target="_blank"><i class="fas fa-briefcase"></i> Acorser</a>
+  </div>
+</div>
+
+<!-- ================= WORKSHOPS SECTION ================= -->
+<section style="padding-top:50px;">
+  <div class="container">
+    <div class="section-title"><i class="fas fa-chalkboard"></i> Workshops Designed &amp; Facilitated</div>
+    <div class="section-sub">10+ specialised programmes for public &amp; private sectors — interactive, practical, and tailored to organisational needs</div>
+
+    <!-- ========== WORKSHOP CAROUSEL ========== -->
+    <div class="workshop-carousel-wrap">
+      <div class="workshop-carousel" id="workshopCarousel">
+
+        <!-- Card 1 -->
+        <div class="workshop-card">
+          <img src="images/scm.jpg" alt="Contract Management" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-file-contract"></i></div>
+            <h3>Contract Management for Supply Chain</h3>
+            <p>Legal aspects of purchasing, logistics and supply chain management — from tender to termination.</p>
+            <span class="tag">Supply Chain</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="workshop-card">
+          <img src="images/labour.jpg" alt="Employment & Labour Relations" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-users"></i></div>
+            <h3>Employment &amp; Labour Relations</h3>
+            <p>Ethical and legal considerations in managing employment relationships, CCMA procedures, and dispute resolution.</p>
+            <span class="tag">Labour Law</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="workshop-card">
+          <img src="images/ict.jpg" alt="ICT Laws and Standards" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-laptop-code"></i></div>
+            <h3>ICT Laws and Standards</h3>
+            <p>Information and Communication Technology legal frameworks, data protection, and cyber compliance.</p>
+            <span class="tag">Technology</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="workshop-card">
+          <img src="images/empli.jpg" alt="Employment Equity Management" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-balance-scale"></i></div>
+            <h3>Employment Equity Management</h3>
+            <p>Compliance and strategic implementation of employment equity plans, reporting, and workplace transformation.</p>
+            <span class="tag">Compliance</span>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="workshop-card">
+          <img src="images/write.jpg" alt="Advanced Business Writing" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-pen-fancy"></i></div>
+            <h3>Advanced Business Writing Skills</h3>
+            <p>Effective business communication, report writing, memo drafting, and professional correspondence.</p>
+            <span class="tag">Communication</span>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="workshop-card">
+          <img src="images/planning.jpg" alt="Planning and Land Use" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Planning and Land Use Management</h3>
+            <p>Legal and regulatory aspects of land use planning, zoning, and municipal spatial development frameworks.</p>
+            <span class="tag">Municipal</span>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="workshop-card">
+          <img src="images/nego.jpg" alt="Negotiating & Drafting Contracts" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-file-signature"></i></div>
+            <h3>Negotiating, Drafting &amp; Managing Contracts</h3>
+            <p>Comprehensive contract lifecycle management — negotiation tactics, drafting best practices, and risk mitigation.</p>
+            <span class="tag">Contracts</span>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="workshop-card">
+          <img src="images/info.jpg" alt="Records and Information Management" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-archive"></i></div>
+            <h3>Records and Information Management</h3>
+            <p>Best practices for records compliance, archiving, retention policies, and governance frameworks.</p>
+            <span class="tag">Governance</span>
+          </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="workshop-card">
+          <img src="images/ohhh.jpg" alt="Workers Compensation" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-briefcase-medical"></i></div>
+            <h3>Workers' Compensation &amp; Workplace Injury</h3>
+            <p>Legal obligations, COIDA claims management, and workplace injury prevention strategies.</p>
+            <span class="tag">COIDA</span>
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="workshop-card">
+          <img src="images/ohs.jpg" alt="Occupational Health & Safety" class="workshop-card-img" />
+          <div class="workshop-card-body">
+            <div class="icon-wrap"><i class="fas fa-hard-hat"></i></div>
+            <h3>Occupational Health &amp; Safety Compliance</h3>
+            <p>Standards as per OHS legislation, risk assessment, incident reporting, and compliance auditing.</p>
+            <span class="tag">OHS Act</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Carousel Controls -->
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" aria-label="Previous workshop"><i class="fas fa-chevron-left"></i></button>
+        <div class="carousel-dots" id="carouselDots"></div>
+        <button class="carousel-btn" id="nextBtn" aria-label="Next workshop"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+
+    <!-- ========== TRAINING METHODOLOGY ========== -->
+    <div class="method-section">
+      <div class="section-title"><i class="fas fa-chalkboard-teacher"></i> Training Methodology &amp; Specialisations</div>
+      <div class="section-sub">Martins designs and facilitates interactive, practical workshops tailored to organisational needs. His approach combines legal rigour with business acumen.</div>
+      <div class="method-grid">
+        <div class="method-item">
+          <div class="m-icon"><i class="fas fa-chalkboard"></i></div>
+          <div class="m-title">Facilitation</div>
+          <div class="m-desc">Interactive sessions with real-world case studies and group exercises.</div>
+        </div>
+        <div class="method-item">
+          <div class="m-icon"><i class="fas fa-file-alt"></i></div>
+          <div class="m-title">Curriculum Design</div>
+          <div class="m-desc">Tailored programmes aligned to SAQA standards and industry needs.</div>
+        </div>
+        <div class="method-item">
+          <div class="m-icon"><i class="fas fa-users"></i></div>
+          <div class="m-title">Coaching &amp; Mentorship</div>
+          <div class="m-desc">Executive and team coaching for leadership and strategic growth.</div>
+        </div>
+        <div class="method-item">
+          <div class="m-icon"><i class="fas fa-gavel"></i></div>
+          <div class="m-title">Legal Compliance</div>
+          <div class="m-desc">Regulatory updates, compliance audits, and risk assessment frameworks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="container">
+    <div><strong style="color:white;">Martins Mbah Njah</strong><br /><span style="font-size:0.9rem;">Admitted Attorney · Tax Practitioner · Debt Counsellor</span></div>
+    <div><i class="fas fa-phone-alt"></i> +27 72 872 7314<br /><i class="fas fa-envelope"></i> njahmbah@acorser.co.za<br /><a href="https://wa.me/27728727314" target="_blank" style="color:#25D366;"><i class="fab fa-whatsapp"></i> WhatsApp</a></div>
+    <div><a href="https://www.acorser.co.za/" target="_blank"><i class="fas fa-globe"></i> acorser.co.za</a><br /><a href="https://www.acorser.co.za/legal" target="_blank"><i class="fas fa-scale-balanced"></i> Legal Practice</a></div>
+  </div>
+</footer>
+
+<script>
+(function() {
+  /* ===== SIDEBAR ===== */
+  const menuToggle = document.getElementById('menuToggle');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const closeBtn = document.getElementById('closeSidebar');
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    overlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+  menuToggle.addEventListener('click', openSidebar);
+  closeBtn.addEventListener('click', closeSidebar);
+  overlay.addEventListener('click', closeSidebar);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSidebar();
+  });
+
+  /* ===== WORKSHOP CAROUSEL ===== */
+  const carousel = document.getElementById('workshopCarousel');
+  const cards = carousel.querySelectorAll('.workshop-card');
+  const dotsContainer = document.getElementById('carouselDots');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+  const carouselWrap = carousel.parentElement;
+
+  let currentIndex = 0;
+  let cardWidth = 360 + 28; // card width + gap
+  let visibleCards = 1;
+  let maxIndex = 0;
+  let autoSlideInterval = null;
+  const AUTO_SLIDE_DELAY = 4000; // 4 seconds
+
+  function updateMetrics() {
+    const wrapWidth = carouselWrap.clientWidth;
+    if (window.innerWidth <= 600) {
+      cardWidth = 280 + 28;
+    } else if (window.innerWidth <= 900) {
+      cardWidth = 300 + 28;
+    } else if (window.innerWidth <= 1100) {
+      cardWidth = 320 + 28;
+    } else {
+      cardWidth = 360 + 28;
+    }
+    visibleCards = Math.max(1, Math.floor(wrapWidth / cardWidth));
+    maxIndex = Math.max(0, cards.length - visibleCards);
+    // Clamp currentIndex if resize made it invalid
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    // Rebuild dots
+    dotsContainer.innerHTML = '';
+    const dotCount = maxIndex + 1;
+    for (let i = 0; i < dotCount; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'cdot' + (i === currentIndex ? ' active' : '');
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      dot.addEventListener('click', () => {
+        stopAutoSlide();
+        goTo(i);
+        startAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    }
+    updateButtons();
+    updatePosition();
+  }
+
+  function updatePosition() {
+    carousel.style.transform = 'translateX(-' + (currentIndex * cardWidth) + 'px)';
+    const dots = dotsContainer.querySelectorAll('.cdot');
+    dots.forEach((d, i) => d.classList.toggle('active', i === currentIndex));
+  }
+
+  function updateButtons() {
+    prevBtn.disabled = currentIndex <= 0;
+    nextBtn.disabled = currentIndex >= maxIndex;
+  }
+
+  function goTo(index) {
+    currentIndex = Math.max(0, Math.min(index, maxIndex));
+    updatePosition();
+    updateButtons();
+  }
+
+  function nextSlide() {
+    if (currentIndex >= maxIndex) {
+      goTo(0); // loop back to start
+    } else {
+      goTo(currentIndex + 1);
+    }
+  }
+
+  function startAutoSlide() {
+    if (autoSlideInterval) clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(nextSlide, AUTO_SLIDE_DELAY);
+  }
+
+  function stopAutoSlide() {
+    if (autoSlideInterval) {
+      clearInterval(autoSlideInterval);
+      autoSlideInterval = null;
+    }
+  }
+
+  prevBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    goTo(currentIndex - 1);
+    startAutoSlide();
+  });
+  nextBtn.addEventListener('click', () => {
+    stopAutoSlide();
+    nextSlide();
+    startAutoSlide();
+  });
+
+  // Pause on hover
+  carouselWrap.addEventListener('mouseenter', stopAutoSlide);
+  carouselWrap.addEventListener('mouseleave', startAutoSlide);
+
+  // Touch / swipe support
+  let startX = 0;
+  let isDragging = false;
+  carousel.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    stopAutoSlide();
+  }, {passive:true});
+  carousel.addEventListener('touchmove', () => {}, {passive:true});
+  carousel.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextSlide();
+      else goTo(currentIndex - 1);
+    }
+    isDragging = false;
+    startAutoSlide();
+  }, {passive:true});
+
+  // Mouse drag support
+  let mouseStartX = 0;
+  let mouseIsDown = false;
+  carousel.addEventListener('mousedown', (e) => {
+    mouseStartX = e.clientX;
+    mouseIsDown = true;
+    carousel.style.cursor = 'grabbing';
+    stopAutoSlide();
+  });
+  carousel.addEventListener('mouseup', (e) => {
+    if (!mouseIsDown) return;
+    const diff = mouseStartX - e.clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextSlide();
+      else goTo(currentIndex - 1);
+    }
+    mouseIsDown = false;
+    carousel.style.cursor = 'grab';
+    startAutoSlide();
+  });
+  carousel.addEventListener('mouseleave', () => {
+    mouseIsDown = false;
+    carousel.style.cursor = 'grab';
+    startAutoSlide();
+  });
+
+  window.addEventListener('resize', () => {
+    updateMetrics();
+  });
+
+  // Init
+  carousel.style.cursor = 'grab';
+  updateMetrics();
+  startAutoSlide();
+
+  /* ===== SECTION FADE-IN ===== */
+  const fadeSections = document.querySelectorAll('section');
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+      }
+    });
+  }, { threshold: 0.1 });
+  fadeSections.forEach(sec => fadeObserver.observe(sec));
+})();
+</script>
+</body>
+</html>
